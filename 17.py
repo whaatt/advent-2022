@@ -96,20 +96,21 @@ for rock in range((rocks - repetition_offset) % repetition_period):
                         filled.add((bl[0] + y_offset, bl[1] + x_offset))
             break
 
-    current_height = height(filled)
-    if all((current_height - 1, x) in filled for x in range(width)):
-        # 566 rocks = 868 height with one as the next piece.
-        # Cycle thereafter is 1720 rocks = 2626 height.
-        print(
-            rock + 1,
-            current_height,
-            ((rock + period_piece_offset + 1) % len(pieces)),
-            directions_i,
-        )
+    # current_height = height(filled)
+    # if all((current_height - 1, x) in filled for x in range(width)):
+    #     # 566 rocks = 868 height with one as the next piece.
+    #     # Cycle thereafter is 1720 rocks = 2626 height.
+    #     # Directions offset 3373.
+    #     print(
+    #         rock + 1,
+    #         current_height,
+    #         ((rock + period_piece_offset + 1) % len(pieces)),
+    #         directions_i,
+    #     )
 
-        for y in range(height(filled) - 1, height(filled) - 10, -1):
-            print("".join("#" if (y, x) in filled else "." for x in range(width)))
-        print()
+    #     for y in range(height(filled) - 1, height(filled) - 10, -1):
+    #         print("".join("#" if (y, x) in filled else "." for x in range(width)))
+    #     print()
 
 
 print(
