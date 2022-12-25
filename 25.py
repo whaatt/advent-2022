@@ -2,7 +2,7 @@
 # flake8: noqa
 
 from functools import cache
-from math import ceil, log
+from math import ceil
 
 
 def snafu_to_decimal(snafu: str) -> int:
